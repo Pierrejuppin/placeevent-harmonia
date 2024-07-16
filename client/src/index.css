@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backgroundpc1 {
+  background-image: url("../static/images/backgroundpc1.jpg");
+}
+
+.backgroundpc2 {
+  background-image: url("../static/images/backgroundpc2.jpg");
+}
