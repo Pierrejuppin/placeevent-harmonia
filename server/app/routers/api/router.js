@@ -21,6 +21,10 @@ const usersRouter = require("./users/router");
 
 router.use("/users", usersRouter);
 
+const eventRouter = require("./event/router");
+
+router.use("/event", eventRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
