@@ -13,6 +13,10 @@ const paidRouter = require("./paid/router");
 
 router.use("/paid", paidRouter);
 
+const categoryRouter = require("./category/router");
+
+router.use("/category", categoryRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
