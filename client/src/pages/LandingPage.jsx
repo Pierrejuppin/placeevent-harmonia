@@ -1,0 +1,33 @@
+import { Link } from "react-router-dom";
+import logo from "../../static/images/rockicon.png";
+
+export default function LandingPage() {
+  return (
+    <div className="backgroundpc2 bg-cover h-screen">
+      <div className="pt-12">
+        <img src={logo} alt="Logo" className="h-25 w-25 mx-auto" />
+        <p className="mt-10 mx-auto text-xl font-main text-white lg:text-center">
+          Réservez !!
+        </p>
+      </div>
+      <div className="mt-8 flex lg:justify-center lg:gap-32 lg:mt-20">
+        <Link to="/register">
+          <button
+            type="button"
+            className="text-white font-main bg-GreenComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+          >
+            Inscription
+          </button>
+        </Link>
+        <Link to="/connexion">
+          <button
+            type="button"
+            className="text-white font-main bg-GreenComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+          >
+            Connexion
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+}
