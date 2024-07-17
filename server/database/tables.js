@@ -1,6 +1,7 @@
 // Import the repository modules responsible for handling data operations on the tables
 const RoleRepository = require("./models/RoleRepository");
 const PaidRepository = require("./models/PaidRepository");
+const CategoryRepository = require("./models/CategoryRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -12,6 +13,7 @@ const tables = {};
 // Register each repository as data access point for its table
 tables.role = new RoleRepository();
 tables.paid = new PaidRepository();
+tables.category = new CategoryRepository();
 
 /* ************************************************************************* */
 
