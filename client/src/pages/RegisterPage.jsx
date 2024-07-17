@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import axios from "axios";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -14,13 +13,11 @@ function RegisterPage() {
     reset,
     formState: { errors },
   } = useForm();
-  const [displaySecondButton, setDisplaySecondButton] = useState(false);
 
   const onSubmit = async (data) => {
     const formData = { ...data };
     delete formData.confirmpassword;
     toast.success("Votre inscritption est prise en compte!");
-    setDisplaySecondButton(true);
     reset();
     try {
       await axios.post(`${import.meta.env.VITE_API_URL}/api/users`, data);
@@ -33,7 +30,7 @@ function RegisterPage() {
     <div className="bg-cover h-screen flex items-center justify-center bg-backgroundpc2 text-white">
       <div className="rounded-xl w-full max-w-md p-6">
         <div className="flex items-center justify-center mb-6">
-          <img src={logo} alt="Logo" className="h-25 w-25 mx-auto" />
+          <img src={logo} alt="Logo" className="h-25 w-25 mx-auto mb-16" />
         </div>
         <div className="flex flex-col gap-3">
           <form
@@ -171,20 +168,6 @@ function RegisterPage() {
                 </span>
               )}
             </div>
-            <button
-              type="submit"
-              className="btn bg-GreenComp text-white w-full p-2 mt-3 hover:bg-gray-600"
-            >
-              Inscription
-            </button>
-            <Link
-              to="/registerCar"
-              type="button"
-              disabled={!displaySecondButton}
-              className={`btn w-full p-2 mt-3 ${displaySecondButton ? "bg-yellow-500 text-white  hover:bg-yellow-600" : "bg-gray-500 cursor-not-allowed"}`}
-            >
-              Suivant
-            </Link>
           </form>
           <p className="text-sm mt-2">
             Déjà inscrit ?
