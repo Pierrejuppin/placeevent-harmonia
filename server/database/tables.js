@@ -2,6 +2,7 @@
 const RoleRepository = require("./models/RoleRepository");
 const PaidRepository = require("./models/PaidRepository");
 const CategoryRepository = require("./models/CategoryRepository");
+const UsersRepository = require("./models/UsersRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -14,6 +15,7 @@ const tables = {};
 tables.role = new RoleRepository();
 tables.paid = new PaidRepository();
 tables.category = new CategoryRepository();
+tables.users = new UsersRepository();
 
 /* ************************************************************************* */
 
