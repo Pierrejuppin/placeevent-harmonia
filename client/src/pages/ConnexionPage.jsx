@@ -11,7 +11,7 @@ export default function ConnexionPage() {
 
   useEffect(() => {
     if (currentUser) {
-      navigate("/landing");
+      navigate("/event");
     }
   }, [currentUser, navigate]);
   const {
