@@ -25,6 +25,10 @@ const eventRouter = require("./event/router");
 
 router.use("/event", eventRouter);
 
+const reservationRouter = require("./reservation/router");
+
+router.use("/reservation", reservationRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;

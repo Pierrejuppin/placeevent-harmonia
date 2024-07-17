@@ -4,6 +4,7 @@ const PaidRepository = require("./models/PaidRepository");
 const CategoryRepository = require("./models/CategoryRepository");
 const UsersRepository = require("./models/UsersRepository");
 const EventRepository = require("./models/EventRepository");
+const ReservationRepository = require("./models/ReservationRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -18,6 +19,7 @@ tables.paid = new PaidRepository();
 tables.category = new CategoryRepository();
 tables.users = new UsersRepository();
 tables.event = new EventRepository();
+tables.reservation = new ReservationRepository();
 
 /* ************************************************************************* */
 
