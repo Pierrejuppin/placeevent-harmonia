@@ -5,10 +5,9 @@ const router = express.Router();
 /* ************************************************************************* */
 // Import And Use Routers Here
 /* ************************************************************************* */
+const roleRouter = require("./role/router");
 
-const itemsRouter = require("./items/router");
-
-router.use("/items", itemsRouter);
+router.use("/role", roleRouter);
 
 /* ************************************************************************* */
 
