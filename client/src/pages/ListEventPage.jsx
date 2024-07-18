@@ -90,7 +90,7 @@ export default function ListEventPage() {
                 </div>
                 <div className="text-BrownComp mb-4">Prix: {event.price}€</div>
                 <Link
-                  to={`/details/${event.event_id}`}
+                  to={`/reservation/${event.event_id}`}
                   className="text-GreenComp hover:text-GreenComp"
                 >
                   Réserver
