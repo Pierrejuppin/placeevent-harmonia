@@ -1,8 +1,11 @@
-import { NavLink } from "react-router-dom";
-import { House, CalendarDays, ListMusic, CircleUserRound } from "lucide-react";
-import logo from "../../static/images/rockicon.png";
+/* eslint-disable react/prop-types */
 
-export default function Navbar() {
+import { NavLink } from "react-router-dom";
+import { House, LogOut, ListMusic, CircleUserRound } from "lucide-react";
+import logo from "../../static/images/rockicon.png";
+import handleLogOut from "../lib/logout";
+
+export default function Navbar({ setCurrentUser }) {
   return (
     <div className="shadow bg-WhiteComp bg-screen">
       <div className="md:flex md:justify-between md:items-center">
@@ -22,12 +25,14 @@ export default function Navbar() {
           >
             <ListMusic color="#31111D" size={50} />
           </NavLink>
-          <NavLink
-            to="/"
+          <button
+            type="button"
+            label="Déconnexion"
+            onClick={() => handleLogOut(setCurrentUser)}
             className="border-b-2 border-transparent transition-colors duration-300 transform hover:text-gray-200 hover:border-GreenComp mx-1.5 sm:mx-6"
           >
-            <CalendarDays color="#31111D" size={50} />
-          </NavLink>
+            <LogOut color="#31111D" size={50} />
+          </button>
           <NavLink
             to="/profile"
             className="border-b-2 border-transparent  transition-colors duration-300 transform hover:text-gray-200 hover:border-GreenComp mx-1.5 sm:mx-6"

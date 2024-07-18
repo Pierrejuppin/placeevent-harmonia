@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 export default function ListEventPage() {
   const [events, setEvents] = useState([]);
@@ -43,8 +42,7 @@ export default function ListEventPage() {
         );
 
   return (
-    <div className="bg-cover h-screen bg-backgroundpc4 no-scrollbar">
-      <Navbar />
+    <div className="bg-cover bg-repeat h-screen bg-backgroundpc4 no-scrollbar">
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Liste des événements</h1>
 
@@ -58,7 +56,7 @@ export default function ListEventPage() {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="block appearance-none w-full bg-WhiteComp border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            className="block w-48 text-sm appearance-none bg-WhiteComp border border-BrownComp hover:border-BrownComp px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           >
             <option value="all">Toutes les catégories</option>
             {categories.map((category) => (
@@ -69,7 +67,7 @@ export default function ListEventPage() {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {filteredEvents.map((event) => (
             <div
               key={event.event_id}
@@ -78,24 +76,28 @@ export default function ListEventPage() {
               <img
                 src={event.image}
                 alt={event.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-32 object-cover"
               />
-              <div className="py-5 px-4 text-center">
-                <h2 className="text-xl font-bold mb-2">{event.name}</h2>
-                <p className="text-BrownComp mb-2">{event.city}</p>
-                <p className="text-BrownComp mb-2">{event.date}</p>
-                <p className="text-BrownComp mb-4">{event.description}</p>
-                <div className="text-BrownComp mb-2">
+              <div className="py-2 px-2 text-center">
+                <h2 className="font-bold mb-1 text-sm">{event.name}</h2>
+                <p className="text-BrownComp mb-1 text-xs">{event.city}</p>
+                <p className="text-BrownComp mb-1 text-xs">{event.date}</p>
+                <p className="text-BrownComp mb-2 text-xs">
+                  {event.description}
+                </p>
+                <div className="text-BrownComp mb-1 text-xs">
                   Artiste: {event.artist}
                 </div>
-                <div className="text-BrownComp mb-4">Prix: {event.price}€</div>
+                <div className="text-BrownComp mb-2 text-xs">
+                  Prix: {event.price}€
+                </div>
                 <Link
                   to={`/reservation/${event.event_id}`}
                   className="text-GreenComp hover:text-GreenComp"
                 >
                   <button
                     type="button"
-                    className="text-GreenComp  font-main bg-BrownComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+                    className="text-GreenComp font-main bg-BrownComp text-xs mx-auto px-2 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
                   >
                     Réserver
                   </button>

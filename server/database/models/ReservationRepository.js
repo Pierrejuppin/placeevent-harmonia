@@ -92,6 +92,7 @@ class ReservationRepository extends AbstractRepository {
         e.name,
         e.image,
         e.artist,
+        e.city,
         e.date
       FROM ${this.table} AS r 
       JOIN users AS u ON r.user_id = u.user_id

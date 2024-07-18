@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="pt-12">
           <img src={logo} alt="Logo" className="h-25 w-25 mx-auto " />
           <h1 className="text-center text-3xl text-white mt-6">
-            Bienvenue sur <span className="text-GreenBlue">Place Event</span>
+            Bienvenue sur <span className="text-GreenComp">Place Event</span>
           </h1>
           <p className="pt-5 ml-10 text-xl text-white lg:text-center">
             Votre site de réservation de place de concert en ligne
