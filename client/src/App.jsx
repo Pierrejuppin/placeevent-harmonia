@@ -1,6 +1,6 @@
 import "./index.css";
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import fetchAuth from "./lib/auth";
@@ -8,9 +8,14 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const location = useLocation();
   useEffect(() => {
     fetchAuth().then((response) => setCurrentUser(response));
   }, []);
+
+  const hiddenPaths = ["/", "/landing", "/connexion", "/register"];
+
+  const shouldShowNavbar = !hiddenPaths.includes(location.pathname);
 
   return (
     <>
@@ -27,7 +32,9 @@ function App() {
         theme="colored"
         transition={Bounce}
       />
-      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      {shouldShowNavbar && (
+        <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      )}
       <Outlet context={{ currentUser, setCurrentUser }} />
       <p className="p-2 text-center text-GreenComp">
         Bienvenue: {currentUser?.first_name}
