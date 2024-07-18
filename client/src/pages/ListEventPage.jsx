@@ -80,7 +80,7 @@ export default function ListEventPage() {
                 alt={event.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
+              <div className="py-5 px-4 text-center">
                 <h2 className="text-xl font-bold mb-2">{event.name}</h2>
                 <p className="text-BrownComp mb-2">{event.city}</p>
                 <p className="text-BrownComp mb-2">{event.date}</p>
