@@ -3,7 +3,6 @@ import { useParams, useOutletContext } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Navbar from "../components/Navbar";
 
 export default function ReservationPage() {
   const { id } = useParams();
@@ -45,7 +44,6 @@ export default function ReservationPage() {
 
   return (
     <div className="bg-cover h-screen bg-backgroundpc3 no-scrollbar">
-      <Navbar />
       <h1 className="text-3xl font-bold mb-4">Page de réservation</h1>
       <div className="bg-WhiteComp w-full max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg ">
         <img
