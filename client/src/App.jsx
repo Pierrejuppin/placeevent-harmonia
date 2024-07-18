@@ -28,7 +28,7 @@ function App() {
       />
 
       <Outlet context={{ currentUser, setCurrentUser }} />
-      <p className="p-2">Bienvenue: {currentUser?.first_name}</p>
+      <p className="p-2 text-center">Bienvenue: {currentUser?.first_name}</p>
     </>
   );
 }
