@@ -4,9 +4,9 @@ import logo from "../../static/images/rockicon.png";
 export default function LandingPage() {
   return (
     <div className="backgroundpc2 bg-cover h-screen">
-      <div className="pt-12">
+      <div className="pt-12 text-center">
         <img src={logo} alt="Logo" className="h-25 w-25 mx-auto" />
-        <p className="mt-10 mx-auto text-xl font-main text-white lg:text-center">
+        <p className=" mt-10 mx-auto text-xl font-main text-white lg:text-center">
           Réservez !!
         </p>
       </div>

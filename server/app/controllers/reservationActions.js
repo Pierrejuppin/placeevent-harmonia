@@ -65,20 +65,12 @@ const destroy = async (req, res, next) => {
   }
 };
 
-const checkReservation = async (req, res) => {
-  const { stationId, startAt, endAt } = req.query;
+const readByUserId = async (req, res, next) => {
   try {
-    const isConflict = await tables.reservation.checkReservation(
-      stationId,
-      startAt,
-      endAt
-    );
-    res.json({ isConflict });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      error: "Erreur lors de la vérification de la disponibilité du créneau.",
-    });
+    const reservations = await tables.reservation.findByUserId(req.params.id);
+    res.json(reservations);
+  } catch (err) {
+    next(err);
   }
 };
 
@@ -88,5 +80,5 @@ module.exports = {
   readOneById,
   update,
   destroy,
-  checkReservation,
+  readByUserId,
 };

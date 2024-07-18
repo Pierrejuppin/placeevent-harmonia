@@ -43,7 +43,7 @@ export default function ListEventPage() {
         );
 
   return (
-    <div className="bg-cover h-screen bg-backgroundpc3 no-scrollbar">
+    <div className="bg-cover h-screen bg-backgroundpc4 no-scrollbar">
       <Navbar />
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Liste des événements</h1>
@@ -80,7 +80,7 @@ export default function ListEventPage() {
                 alt={event.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
+              <div className="py-5 px-4 text-center">
                 <h2 className="text-xl font-bold mb-2">{event.name}</h2>
                 <p className="text-BrownComp mb-2">{event.city}</p>
                 <p className="text-BrownComp mb-2">{event.date}</p>
@@ -93,7 +93,12 @@ export default function ListEventPage() {
                   to={`/reservation/${event.event_id}`}
                   className="text-GreenComp hover:text-GreenComp"
                 >
-                  Réserver
+                  <button
+                    type="button"
+                    className="text-GreenComp  font-main bg-BrownComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+                  >
+                    Réserver
+                  </button>
                 </Link>
               </div>
             </div>

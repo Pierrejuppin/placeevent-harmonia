@@ -24,7 +24,24 @@ class UsersRepository extends AbstractRepository {
 
   async readOneById(id) {
     const [rows] = await this.database.query(
-      ` SELECT u.user_id, u.first_name, u.last_name, u.email, u.password, u.role_id FROM ${this.table} AS u JOIN role AS r ON u.role_id = r.role_id WHERE u.user_id = ?`,
+      ` SELECT
+      u.user_id, 
+      u.first_name, 
+      u.last_name, 
+      u.email, 
+      u.password, 
+      u.role_id, 
+      re.reservation_id, 
+      e.event_id, 
+      e.name, 
+      e.artist, 
+      e.date  
+      FROM 
+      ${this.table} AS u 
+      JOIN role AS ro ON u.role_id = ro.role_id
+      JOIN reservation AS re ON u.user_id = re.user_id
+      JOIN event AS e ON re.event_id = e.event_id 
+      WHERE u.user_id = ?`,
       [id]
     );
     return rows[0];

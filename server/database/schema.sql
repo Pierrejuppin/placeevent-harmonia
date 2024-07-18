@@ -1,6 +1,6 @@
 CREATE TABLE role (
     role_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    role VARCHAR(255) DEFAULT "User"
+    role VARCHAR(255) DEFAULT 1
 );
 
 CREATE TABLE paid (
@@ -19,7 +19,7 @@ CREATE TABLE users (
     last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    role_id INT UNSIGNED,
+    role_id INT UNSIGNED DEFAULT 1,
     FOREIGN KEY (role_id) REFERENCES role (role_id)
 );
 

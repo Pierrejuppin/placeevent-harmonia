@@ -49,7 +49,7 @@ export default function ReservationPage() {
       <h1 className="text-3xl font-bold mb-4">Page de réservation</h1>
       <div className="bg-WhiteComp w-full max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg ">
         <img
-          src="https://plus.unsplash.com/premium_photo-1709311418063-35661a7e3343?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={eventDetails.image}
           alt={eventDetails.name}
           className="object-cover w-full h-40"
         />
