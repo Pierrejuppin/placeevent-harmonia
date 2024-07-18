@@ -27,10 +27,10 @@ function RegisterPage() {
   };
 
   return (
-    <div className="bg-cover h-screen flex items-center justify-center bg-backgroundpc2 text-white">
+    <div className="bg-cover h-screen bg-backgroundpc2 flex items-center justify-center bg-black text-white">
       <div className="rounded-xl w-full max-w-md p-6">
         <div className="flex items-center justify-center mb-6">
-          <img src={logo} alt="Logo" className="h-25 w-25 mx-auto mb-16" />
+          <img src={logo} alt="Logo" className="w-20 h-20" />
         </div>
         <div className="flex flex-col gap-3">
           <form
@@ -42,7 +42,7 @@ function RegisterPage() {
                 Prénom :
               </label>
               <input
-                className="input bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
+                className="input rounded-xl bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
                 type="text"
                 id="firstName"
                 name="firstName"
@@ -68,7 +68,7 @@ function RegisterPage() {
                 Nom :
               </label>
               <input
-                className="input bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
+                className="input rounded-xl bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
                 type="text"
                 id="lastName"
                 name="lastName"
@@ -93,7 +93,7 @@ function RegisterPage() {
                 Email :
               </label>
               <input
-                className="input bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
+                className="input rounded-xl bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
                 type="email"
                 id="email"
                 name="email"
@@ -118,7 +118,7 @@ function RegisterPage() {
                 Mot de passe :
               </label>
               <input
-                className="input bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
+                className="input rounded-xl bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
                 type="password"
                 id="password"
                 name="password"
@@ -144,7 +144,7 @@ function RegisterPage() {
                 Confirmez votre mot de passe :
               </label>
               <input
-                className="input bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
+                className="input rounded-xl bg-white border border-gray-500 text-black placeholder-gray-500 w-full p-2 mt-1"
                 type="password"
                 id="confirmpassword"
                 name="confirmpassword"
@@ -168,13 +168,19 @@ function RegisterPage() {
                 </span>
               )}
             </div>
+            <button
+              type="submit"
+              className="btn rounded-xl bg-GreenComp text-white w-full p-2 mt-3 hover:bg-gray-600"
+            >
+              Inscription
+            </button>
           </form>
           <p className="text-sm mt-2">
             Déjà inscrit ?
             <Link
               to="/connexion"
               type="button"
-              className="text-blue-400 underline hover:text-blue-300"
+              className="text-GreenComp underline hover:text-BrownComp ml-2"
             >
               Connexion
             </Link>

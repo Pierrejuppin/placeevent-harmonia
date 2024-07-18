@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         WhiteComp: "#E5E9E7",
-        BrownComp: "#5D5D5D",
+        BrownComp: "#31111D",
+        GreenComp: "#C9CBA3",
       },
 
       backgroundImage: {

@@ -10,23 +10,25 @@ export default function LandingPage() {
           Réservez !!
         </p>
       </div>
-      <div className="mt-8 flex lg:justify-center lg:gap-32 lg:mt-20">
-        <Link to="/register">
-          <button
-            type="button"
-            className="text-white font-main bg-GreenComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
-          >
-            Inscription
-          </button>
-        </Link>
-        <Link to="/connexion">
-          <button
-            type="button"
-            className="text-white font-main bg-GreenComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
-          >
-            Connexion
-          </button>
-        </Link>
+      <div className="flex justify-center">
+        <div className="mt-8 flex lg:justify-center gap-12">
+          <Link to="/register">
+            <button
+              type="button"
+              className="text-GreenComp font-main bg-BrownComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+            >
+              Inscription
+            </button>
+          </Link>
+          <Link to="/connexion">
+            <button
+              type="button"
+              className="text-GreenComp font-main bg-BrownComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+            >
+              Connexion
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -6,12 +6,8 @@ export default function HomePage() {
     <main className="backgroundpc1 bg-cover min-h-screen">
       <div>
         <div className="pt-12">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-25 w-25 mx-auto shadow-3xl shadow-green-700"
-          />
-          <h1 className="text-center text-3xl mt-8 text-white lg:mt-20">
+          <img src={logo} alt="Logo" className="h-25 w-25 mx-auto " />
+          <h1 className="text-center text-3xl text-white mt-6">
             Bienvenue sur <span className="text-GreenBlue">Place Event</span>
           </h1>
           <p className="pt-5 ml-10 text-xl text-white lg:text-center">
@@ -19,11 +15,11 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-20 flex flex-col justify-center items-center lg:gap-1">
+        <div className="m-6 flex flex-col justify-center items-center lg:gap-1">
           <Link to="/landing">
             <button
               type="button"
-              className="text-white text-2xl mx-auto px-8 rounded-md "
+              className="text-GreenComp bg-BrownComp  p-2 rounded-md "
             >
               Démarrer
             </button>
