@@ -9,6 +9,7 @@ import LandingPage from "./pages/LandingPage";
 import RegisterPage from "./pages/RegisterPage";
 import ConnexionPage from "./pages/ConnexionPage";
 import ListEventPage from "./pages/ListEventPage";
+import ReservationPage from "./pages/ReservationPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/event",
         element: <ListEventPage />,
+      },
+      {
+        path: "reservation/:id",
+        element: <ReservationPage />,
       },
     ],
   },

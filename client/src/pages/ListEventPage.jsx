@@ -43,7 +43,7 @@ export default function ListEventPage() {
         );
 
   return (
-    <div className="bg-backgroundpc3 bg-cover h-screen">
+    <div className="bg-cover h-screen bg-backgroundpc3 no-scrollbar">
       <Navbar />
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Liste des événements</h1>
@@ -90,7 +90,7 @@ export default function ListEventPage() {
                 </div>
                 <div className="text-BrownComp mb-4">Prix: {event.price}€</div>
                 <Link
-                  to={`/details/${event.event_id}`}
+                  to={`/reservation/${event.event_id}`}
                   className="text-GreenComp hover:text-GreenComp"
                 >
                   Réserver

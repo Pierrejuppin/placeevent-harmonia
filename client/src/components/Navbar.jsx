@@ -17,7 +17,7 @@ export default function Navbar() {
             <House color="#31111D" size={50} />
           </NavLink>
           <NavLink
-            to="/"
+            to="/event"
             className="border-b-2 border-transparent  transition-colors duration-300 transform hover:text-gray-200 hover:border-GreenComp mx-1.5 sm:mx-6"
           >
             <ListMusic color="#31111D" size={50} />
