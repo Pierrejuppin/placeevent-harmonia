@@ -43,7 +43,7 @@ export default function ListEventPage() {
         );
 
   return (
-    <div className="bg-cover h-screen bg-backgroundpc3 no-scrollbar">
+    <div className="bg-cover h-screen bg-backgroundpc4 no-scrollbar">
       <Navbar />
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Liste des événements</h1>
@@ -93,7 +93,12 @@ export default function ListEventPage() {
                   to={`/reservation/${event.event_id}`}
                   className="text-GreenComp hover:text-GreenComp"
                 >
-                  Réserver
+                  <button
+                    type="button"
+                    className="text-GreenComp  font-main bg-BrownComp text-xl mx-auto px-3 py-1 rounded-md flex justify-center items-center gap-4 lg:mx-0"
+                  >
+                    Réserver
+                  </button>
                 </Link>
               </div>
             </div>

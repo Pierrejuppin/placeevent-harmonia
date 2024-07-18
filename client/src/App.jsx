@@ -27,8 +27,8 @@ function App() {
         transition={Bounce}
       />
 
-      {/* <p className="p-2">Bienvenue: {currentUser?.first_name}</p> */}
       <Outlet context={{ currentUser, setCurrentUser }} />
+      <p className="p-2">Bienvenue: {currentUser?.first_name}</p>
     </>
   );
 }

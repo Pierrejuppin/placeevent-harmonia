@@ -6,6 +6,7 @@ const {
   create,
   readAll,
   readOneById,
+  readByUserId,
   update,
   destroy,
 } = require("../../../controllers/reservationActions");
@@ -13,6 +14,8 @@ const {
 router.get("/", readAll);
 
 router.get("/:id", readOneById);
+
+router.get("/user/:id/", readByUserId);
 
 router.post("/", create);
 

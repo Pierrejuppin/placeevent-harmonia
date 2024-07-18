@@ -81,23 +81,23 @@ class ReservationRepository extends AbstractRepository {
     return result.affectedRows > 0;
   }
 
-  async findByUserId(userId) {
+  async findByUserId(id) {
     const [rows] = await this.database.query(
       `SELECT
-      r.reservation_id,
-      u.user_id,
-      u.first_name,
-      u.last_name,
-      e.event_id,
-      e.name,
-      e.image,
-      e.artist,
-      p.paid_id
+        r.reservation_id,
+        u.user_id,
+        u.first_name,
+        u.last_name,
+        e.event_id,
+        e.name,
+        e.image,
+        e.artist,
+        e.date
       FROM ${this.table} AS r 
       JOIN users AS u ON r.user_id = u.user_id
       JOIN event AS e ON r.event_id = e.event_id
-      JOIN paid AS p ON r.paid_id = p.paid_id WHERE r.user_id = ?`,
-      [userId]
+      WHERE r.user_id = ?`,
+      [id]
     );
     return rows;
   }
