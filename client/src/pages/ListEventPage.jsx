@@ -60,7 +60,7 @@ export default function ListEventPage() {
           >
             <option value="all">Toutes les catégories</option>
             {categories.map((category) => (
-              <option key={category.id} value={category.id}>
+              <option key={category.category_id} value={category.category_id}>
                 {category.name}
               </option>
             ))}
@@ -74,8 +74,7 @@ export default function ListEventPage() {
               className="bg-WhiteComp rounded-lg shadow-md overflow-hidden"
             >
               <img
-                src="https://images.pexels.com/photos/22857353/pexels-photo-22857353/free-photo-of-homme-silhouette-musique-debout.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-"
+                src={event.image}
                 alt={event.name}
                 className="w-full h-32 object-cover"
               />
