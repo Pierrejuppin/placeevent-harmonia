@@ -42,7 +42,7 @@ export default function ListEventPage() {
         );
 
   return (
-    <div className="bg-cover bg-repeat h-screen bg-backgroundpc4 no-scrollbar">
+    <div className="bg-cover bg-repeat bg-backgroundpc4 no-scrollbar">
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Liste des événements</h1>
 
@@ -67,7 +67,7 @@ export default function ListEventPage() {
           </select>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-10">
           {filteredEvents.map((event) => (
             <div
               key={event.event_id}
