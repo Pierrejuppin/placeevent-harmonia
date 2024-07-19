@@ -58,7 +58,7 @@ function RegisterPage() {
                 })}
               />
               {errors?.firstName && (
-                <span className="text-red-500 text-center">
+                <span className="text-GreenComp text-center">
                   {errors.firstName.message}
                 </span>
               )}
@@ -82,7 +82,7 @@ function RegisterPage() {
                 })}
               />
               {errors?.lastName && (
-                <span className="text-red-500 text-center">
+                <span className="text-GreenComp text-center">
                   {" "}
                   {errors.lastName.message}{" "}
                 </span>
@@ -107,7 +107,7 @@ function RegisterPage() {
                 })}
               />
               {errors?.email && (
-                <span className="text-red-500 text-center">
+                <span className="text-GreenComp text-center">
                   {" "}
                   {errors.email.message}{" "}
                 </span>
@@ -133,7 +133,7 @@ function RegisterPage() {
                 })}
               />
               {errors?.password && (
-                <span className="text-red-500 text-center">
+                <span className="text-GreenComp text-center">
                   {" "}
                   {errors.password.message}{" "}
                 </span>
@@ -162,7 +162,7 @@ function RegisterPage() {
                 })}
               />
               {errors?.confirmpassword && (
-                <span className="text-red-500 text-center">
+                <span className="text-GreenComp text-center">
                   {" "}
                   {errors.confirmpassword.message}{" "}
                 </span>

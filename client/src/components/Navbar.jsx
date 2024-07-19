@@ -7,10 +7,14 @@ import handleLogOut from "../lib/logout";
 
 export default function Navbar({ setCurrentUser }) {
   return (
-    <div className="shadow bg-WhiteComp bg-screen">
+    <div className="shadow bg-WhiteComp">
       <div className="md:flex md:justify-between md:items-center">
         <div className="flex justify-between">
-          <img src={logo} alt="" className="h-25 w-25 p-2 ml-4 " />
+          <img
+            src={logo}
+            alt=""
+            className="hidden sm:block h-25 w-25 p-2 ml-4"
+          />
         </div>
         <div className="flex justify-end ml-50 text-gray-300">
           <NavLink

@@ -14,6 +14,8 @@ export default {
         backgroundpc2: "url('./static/images/backgroundpc2.jpg')",
         backgroundpc3: "url('./static/images/backgroundpc3.jpg')",
         backgroundpc4: "url('./static/images/backgroundpc4.jpg')",
+        backgroundmobile: "url('./static/images/backgroundmobile.jpg')",
+        backgroundmobile2: "url('./static/images/backgroundmobile.jp')",
       },
     },
   },
