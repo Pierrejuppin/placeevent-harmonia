@@ -44,7 +44,7 @@ export default function ReservationPage() {
 
   return (
     <div className="bg-cover h-screen bg-backgroundpc3 no-scrollbar">
-      <h1 className="text-3xl font-bold mb-4">Page de réservation</h1>
+      <h1 className="text-3xl font-bold mb-4 p-1">Réservation :</h1>
       <div className="bg-WhiteComp w-full max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg ">
         <img
           src={eventDetails.image}

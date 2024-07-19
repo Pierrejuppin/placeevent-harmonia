@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Opera */
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE et Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 .backgroundpc1 {
   background-image: url("../static/images/backgroundpc1.jpg");
 }
