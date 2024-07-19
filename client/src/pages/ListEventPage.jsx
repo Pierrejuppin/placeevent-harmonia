@@ -74,7 +74,8 @@ export default function ListEventPage() {
               className="bg-WhiteComp rounded-lg shadow-md overflow-hidden"
             >
               <img
-                src={event.image}
+                src="https://images.pexels.com/photos/22857353/pexels-photo-22857353/free-photo-of-homme-silhouette-musique-debout.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+"
                 alt={event.name}
                 className="w-full h-32 object-cover"
               />
