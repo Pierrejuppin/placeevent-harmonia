@@ -12,3 +12,9 @@
 .backgroundpc3 {
   background-image: url("../static/images/backgroundpc3.jpg");
 }
+
+.backgroundpc4 {
+  background-image: url("../static/images/backgroundpc4.jpg");
+  size: cover;
+  height: 350vh;
+}

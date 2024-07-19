@@ -36,9 +36,6 @@ function App() {
         <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       )}
       <Outlet context={{ currentUser, setCurrentUser }} />
-      <p className="p-2 text-center text-GreenComp">
-        Bienvenue: {currentUser?.first_name}
-      </p>
     </>
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { NavLink } from "react-router-dom";
-import { House, LogOut, ListMusic, CircleUserRound } from "lucide-react";
+import { House, LogIn, LogOut, ListMusic, CircleUserRound } from "lucide-react";
 import logo from "../../static/images/rockicon.png";
 import handleLogOut from "../lib/logout";
 
@@ -24,6 +24,12 @@ export default function Navbar({ setCurrentUser }) {
             className="border-b-2 border-transparent  transition-colors duration-300 transform hover:text-gray-200 hover:border-GreenComp mx-1.5 sm:mx-6"
           >
             <ListMusic color="#31111D" size={50} />
+          </NavLink>
+          <NavLink
+            to="/connexion"
+            className="border-b-2 border-transparent  transition-colors duration-300 transform hover:text-gray-200 hover:border-GreenComp mx-1.5 sm:mx-6"
+          >
+            <LogIn color="#31111D" size={50} />
           </NavLink>
           <button
             type="button"
